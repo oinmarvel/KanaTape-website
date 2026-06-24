@@ -61,6 +61,8 @@
   --spacing-md: 24px;
   --spacing-lg: 48px;
 
+  --width-container-max: 1200px;
+
   --font-family-sans: "Plus Jakarta Sans", sans-serif;
 }
 
@@ -70,7 +72,9 @@
 @utility text-label-md { font-size: 14px; line-height: 20px; letter-spacing: 0.05em; font-weight: 600; }
 @utility text-title-md { font-size: 20px; line-height: 28px; font-weight: 600; }
 @utility text-display-lg { font-size: 48px; line-height: 56px; letter-spacing: -0.02em; font-weight: 700; }
+@utility text-display-md { font-size: 32px; line-height: 40px; letter-spacing: -0.02em; font-weight: 700; }
 @utility text-headline-lg-mobile { font-size: 28px; line-height: 36px; font-weight: 700; }
+@utility text-stats-lg { font-size: 36px; line-height: 44px; letter-spacing: -0.02em; font-weight: 700; }
 
 @utility font-headline-lg { font-family: "Plus Jakarta Sans", sans-serif; }
 @utility font-body-lg { font-family: "Plus Jakarta Sans", sans-serif; }
@@ -89,10 +93,18 @@
     background-color: #FFF8EE;
     font-family: 'Plus Jakarta Sans', sans-serif;
     color: var(--color-on-background);
+    overflow-x: hidden;
   }
 }
 
 @layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
   .material-symbols-outlined {
     font-family: 'Material Symbols Outlined';
     font-weight: normal;

@@ -8,7 +8,7 @@ export const CTASection: React.FC = () => {
         <div className="w-full h-full" style={{ backgroundImage: 'radial-gradient(#675000 2px, transparent 2px)', backgroundSize: '30px 30px' }}></div>
       </div>
       <div className="max-w-3xl mx-auto text-center relative z-10 fade-up">
-        <h2 className="font-display-lg text-display-lg mb-8">Siap Menikmati Olahan Tape Favorit Anda?</h2>
+        <h2 className="font-display-lg text-display-md md:text-display-lg mb-6 md:mb-8">Siap Menikmati Olahan Tape Favorit Anda?</h2>
         <p className="text-body-lg mb-12 opacity-90">Jangan lewatkan kelezatan premium buatan tangan kami. Pesan hari ini untuk pengiriman esok hari!</p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <a 

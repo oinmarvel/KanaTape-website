@@ -1,18 +1,24 @@
 import React from 'react';
 import { getWhatsAppUrl } from '@/utils/whatsapp';
+import { FaWhatsapp } from 'react-icons/fa';
 
 export const ContactSection: React.FC = () => {
   return (
-    <section className="py-20 px-gutter max-w-container-max mx-auto" id="kontak">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-lg">
+    <section className="py-16 md:py-20 px-gutter max-w-container-max mx-auto" id="kontak">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-md md:gap-lg items-start">
         <div className="fade-up space-y-md">
           <h2 className="font-display-lg text-headline-lg text-secondary">Hubungi Kami</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-md">
-            <div className="p-md bg-white rounded-lg shadow-sm border border-outline-variant/30">
-              <span className="material-symbols-outlined text-primary mb-2">location_on</span>
+            <a 
+              href="https://www.google.com/maps/dir/?api=1&destination=Jl.+Talun+Kacang+RT+04+RT+03+Kandri+Gunungpati"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-md bg-white rounded-lg shadow-sm border border-outline-variant/30 hover:shadow-md hover:border-primary/30 transition-all group block"
+            >
+              <span className="material-symbols-outlined text-primary mb-2 group-hover:scale-110 transition-transform inline-block">location_on</span>
               <h4 className="font-bold">Alamat</h4>
-              <p className="text-sm text-on-surface-variant">Jl. Pâtisserie No. 45, Bandung, Jawa Barat</p>
-            </div>
+              <p className="text-sm text-on-surface-variant">Jl. Talun Kacang RT 04 RT 03 Kandri, Gunungpati</p>
+            </a>
             <div className="p-md bg-white rounded-lg shadow-sm border border-outline-variant/30">
               <span className="material-symbols-outlined text-primary mb-2">schedule</span>
               <h4 className="font-bold">Jam Buka</h4>
@@ -35,20 +41,22 @@ export const ContactSection: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="material-symbols-outlined">chat</span> Chat via WhatsApp Sekarang
+            <FaWhatsapp className="text-xl" /> Chat via WhatsApp Sekarang
           </a>
         </div>
-        <div className="fade-up flex items-center justify-center h-full min-h-[400px]">
-          <a
-            href={getWhatsAppUrl('Halo Kana Tape & Kitchen, saya ingin bertanya tentang produk.')}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="w-48 h-48 bg-[#25D366] text-white rounded-full flex flex-col items-center justify-center shadow-2xl hover:scale-110 transition-transform duration-500 whatsapp-pulse group"
-            aria-label="Chat via WhatsApp"
-          >
-            <span className="material-symbols-outlined text-[80px] mb-2" style={{ fontVariationSettings: "'FILL' 1" }}>whatshot</span>
-            <span className="font-bold text-lg">Hubungi Kami</span>
-          </a>
+        <div className="fade-up h-full min-h-[300px] md:min-h-[450px]">
+          <div className="rounded-lg overflow-hidden shadow-2xl border border-outline-variant/30 h-full">
+            <iframe
+              title="Lokasi Kana Tape & Kitchen"
+              src="https://maps.google.com/maps?q=-7.0475,110.3635&z=16&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0, minHeight: '300px' }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
         </div>
       </div>
     </section>

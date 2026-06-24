@@ -4,7 +4,7 @@ import { getWhatsAppUrl } from '@/utils/whatsapp';
 
 export const FeaturedProductsSection: React.FC = () => {
   return (
-    <section className="py-20 bg-surface-container-low px-gutter" id="produk">
+    <section className="py-16 md:py-20 bg-surface-container-low px-gutter overflow-hidden" id="produk">
       <div className="max-w-container-max mx-auto">
         <div className="text-center mb-16 fade-up">
           <h2 className="font-display-lg text-headline-lg text-secondary mb-4">Produk Unggulan</h2>
