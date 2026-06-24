@@ -1,0 +1,142 @@
+@import "tailwindcss";
+
+@theme {
+  --color-surface-bright: #fbf9f8;
+  --color-on-primary: #ffffff;
+  --color-secondary: #765933;
+  --color-background: #fbf9f8;
+  --color-outline: #7e7664;
+  --color-on-error: #ffffff;
+  --color-surface-container: #f0eded;
+  --color-on-surface: #1b1c1c;
+  --color-secondary-fixed: #ffddb6;
+  --color-on-secondary-fixed: #2a1800;
+  --color-inverse-on-surface: #f3f0f0;
+  --color-inverse-surface: #303030;
+  --color-primary-container: #e8c45b;
+  --color-surface: #fbf9f8;
+  --color-surface-container-high: #eae8e7;
+  --color-on-secondary: #ffffff;
+  --color-surface-variant: #e4e2e1;
+  --color-secondary-container: #fed6a6;
+  --color-on-tertiary-fixed: #251a00;
+  --color-tertiary-container: #f0c248;
+  --color-on-error-container: #93000a;
+  --color-error-container: #ffdad6;
+  --color-on-primary-container: #675000;
+  --color-on-secondary-container: #795b35;
+  --color-surface-container-lowest: #ffffff;
+  --color-surface-container-low: #f6f3f2;
+  --color-on-primary-fixed-variant: #584400;
+  --color-outline-variant: #d0c5b1;
+  --color-surface-dim: #dcd9d9;
+  --color-on-tertiary-fixed-variant: #5a4400;
+  --color-tertiary: #775a00;
+  --color-on-tertiary-container: #695000;
+  --color-primary: #745b00;
+  --color-inverse-primary: #e7c35a;
+  --color-on-surface-variant: #4d4636;
+  --color-tertiary-fixed-dim: #efc046;
+  --color-surface-tint: #745b00;
+  --color-tertiary-fixed: #ffdf97;
+  --color-primary-fixed-dim: #e7c35a;
+  --color-on-primary-fixed: #241a00;
+  --color-secondary-fixed-dim: #e7c092;
+  --color-on-tertiary: #ffffff;
+  --color-surface-container-highest: #e4e2e1;
+  --color-primary-fixed: #ffe08b;
+  --color-error: #ba1a1a;
+  --color-on-secondary-fixed-variant: #5c421e;
+  --color-on-background: #1b1c1c;
+
+  --radius-lg: 24px;
+  --radius-xl: 3rem;
+
+  --spacing-base: 8px;
+  --spacing-xs: 4px;
+  --spacing-xl: 80px;
+  --spacing-container-max: 1200px;
+  --spacing-gutter: 20px;
+  --spacing-sm: 12px;
+  --spacing-md: 24px;
+  --spacing-lg: 48px;
+
+  --font-family-sans: "Plus Jakarta Sans", sans-serif;
+}
+
+@utility text-headline-lg { font-size: 32px; line-height: 40px; letter-spacing: -0.01em; font-weight: 700; }
+@utility text-body-lg { font-size: 18px; line-height: 28px; font-weight: 400; }
+@utility text-body-md { font-size: 16px; line-height: 24px; font-weight: 400; }
+@utility text-label-md { font-size: 14px; line-height: 20px; letter-spacing: 0.05em; font-weight: 600; }
+@utility text-title-md { font-size: 20px; line-height: 28px; font-weight: 600; }
+@utility text-display-lg { font-size: 48px; line-height: 56px; letter-spacing: -0.02em; font-weight: 700; }
+@utility text-headline-lg-mobile { font-size: 28px; line-height: 36px; font-weight: 700; }
+
+@utility font-headline-lg { font-family: "Plus Jakarta Sans", sans-serif; }
+@utility font-body-lg { font-family: "Plus Jakarta Sans", sans-serif; }
+@utility font-body-md { font-family: "Plus Jakarta Sans", sans-serif; }
+@utility font-label-md { font-family: "Plus Jakarta Sans", sans-serif; }
+@utility font-title-md { font-family: "Plus Jakarta Sans", sans-serif; }
+@utility font-display-lg { font-family: "Plus Jakarta Sans", sans-serif; }
+@utility font-headline-lg-mobile { font-family: "Plus Jakarta Sans", sans-serif; }
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    background-color: #FFF8EE;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--color-on-background);
+  }
+}
+
+@layer utilities {
+  .material-symbols-outlined {
+    font-family: 'Material Symbols Outlined';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    display: inline-block;
+    white-space: nowrap;
+    word-wrap: normal;
+    direction: ltr;
+    -webkit-font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+    font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  }
+
+  .fade-up {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+  }
+
+  .fade-up.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .card-shadow {
+    box-shadow: 0 4px 20px rgba(107, 79, 42, 0.06);
+  }
+
+  .card-shadow:hover {
+    box-shadow: 0 8px 30px rgba(107, 79, 42, 0.12);
+    transform: translateY(-4px);
+  }
+
+  .whatsapp-pulse {
+    animation: pulse-green 2s infinite;
+  }
+
+  @keyframes pulse-green {
+    0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+  }
+}
