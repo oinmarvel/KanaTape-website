@@ -8,7 +8,7 @@ export const GallerySection: React.FC = () => {
     { src: 'chiffon_slicecoklat.JPG', alt: 'Delivery person handing over a box' },
     { src: 'chiffon_slicekeju.JPG', alt: 'Monyet pecinta tape muffin' },
     { src: 'gethuk_galeri2.JPG', alt: 'Produk Kana Tape siap saji' },
-    { src: 'gethuk_galeri1.JPG', alt: 'Gethuk tape lezat pilihan keluarga' },
+    { src: 'muffin_tangan1.jpg', alt: 'Gethuk tape lezat pilihan keluarga' },
     { src: 'hemi_monyet.jpeg', alt: 'Chiffon tape slice coklat premium' },
   ];
 
