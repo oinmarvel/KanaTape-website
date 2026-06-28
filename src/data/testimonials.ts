@@ -28,4 +28,18 @@ export const testimonials: Testimonial[] = [
     content: 'Respon admin cepat, pengiriman aman. Chiffon-nya masih fresh banget enakk!',
     rating: 5,
   },
+  {
+    id: '4',
+    name: 'Moreno Patrizio',
+    role: 'Mahasiswa Binus',
+    content: 'Tape fermentasinya beda banget dari yang di pasar, lebih wangi josjis pokoke. Beli buat ngemil sambil nugas, malah habis sebelum keburu dikerjain hahaha!',
+    rating: 5,
+  },
+  {
+    id: '5',
+    name: 'Agus Setiawan',
+    role: 'Pengusaha Kuliner',
+    content: 'Sudah langganan hampir setahun untuk kebutuhan usaha saya. Kualitas tape Ibu Sukana konsisten, tidak pernah mengecewakan. Harga pun sangat terjangkau untuk kualitas sebagus ini.',
+    rating: 5,
+  },
 ];

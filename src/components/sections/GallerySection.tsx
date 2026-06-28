@@ -7,6 +7,9 @@ export const GallerySection: React.FC = () => {
     { src: 'gethuk_galeri1.JPG', alt: 'Hand picking up a piece of Gethuk Tape' },
     { src: 'chiffon_slicecoklat.JPG', alt: 'Delivery person handing over a box' },
     { src: 'hemi_monyet.jpeg', alt: 'Monyet pecinta tape muffin' },
+    { src: 'tape_galeri1.JPG', alt: 'Produk Kana Tape siap saji' },
+    { src: 'gethuk_galeri1.JPG', alt: 'Gethuk tape lezat pilihan keluarga' },
+    { src: 'chiffon_slicecoklat.JPG', alt: 'Chiffon tape slice coklat premium' },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -43,19 +46,21 @@ export const GallerySection: React.FC = () => {
     <section className="py-20 bg-surface-container-low px-gutter" id="galeri">
       <div className="max-w-container-max mx-auto">
         <h2 className="text-center font-display-lg text-headline-lg text-secondary mb-12 fade-up">Galeri Rasa</h2>
-        <div className="columns-1 sm:columns-2 md:columns-3 gap-md space-y-md">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-md">
           {images.map((img, idx) => (
             <div 
               key={idx} 
-              className="fade-up overflow-hidden rounded-lg group cursor-pointer relative"
+              className={`fade-up overflow-hidden rounded-lg group cursor-pointer relative ${idx === 0 || idx === 3 ? 'sm:col-span-1' : ''}`}
               onClick={() => openModal(idx)}
             >
-              <img
-                className="w-full h-auto object-cover group-hover:scale-110 transition-all duration-700"
-                alt={img.alt}
-                src={img.src}
-                loading="lazy"
-              />
+              <div className="aspect-square overflow-hidden">
+                <img
+                  className="w-full h-full object-cover group-hover:scale-110 transition-all duration-700"
+                  alt={img.alt}
+                  src={img.src}
+                  loading="lazy"
+                />
+              </div>
               <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                 <span className="material-symbols-outlined text-white text-4xl">zoom_in</span>
               </div>

@@ -9,7 +9,7 @@ export const ContactSection: React.FC = () => {
         <div className="fade-up space-y-md">
           <h2 className="font-display-lg text-headline-lg text-secondary">Hubungi Kami</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-md">
-            <a 
+            <a
               href="https://www.google.com/maps/dir/?api=1&destination=Jl.+Talun+Kacang+RT+04+RT+03+Kandri+Gunungpati"
               target="_blank"
               rel="noopener noreferrer"
@@ -29,14 +29,19 @@ export const ContactSection: React.FC = () => {
               <h4 className="font-bold">WhatsApp</h4>
               <p className="text-sm text-on-surface-variant">+62 812 3456 7890</p>
             </div>
-            <div className="p-md bg-white rounded-lg shadow-sm border border-outline-variant/30">
-              <span className="material-symbols-outlined text-primary mb-2">share</span>
+            <a
+              href="https://www.instagram.com/catering_dapoermamamia.smg?igsh=MW41cDl3anQ5c3VwbQ=="
+              target="_blank"
+              rel="noopener noreferrer"
+              className="p-md bg-white rounded-lg shadow-sm border border-outline-variant/30 hover:shadow-md hover:border-primary/30 transition-all group block"
+            >
+              <span className="material-symbols-outlined text-primary mb-2 group-hover:scale-110 transition-transform inline-block">photo_camera</span>
               <h4 className="font-bold">Instagram</h4>
-              <p className="text-sm text-on-surface-variant">@kanatapekitchen</p>
-            </div>
+              <p className="text-sm text-on-surface-variant">@catering_dapoermamamia.smg</p>
+            </a>
           </div>
-          <a 
-            className="w-full bg-primary text-on-primary py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:scale-[1.02] transition-all shadow-lg" 
+          <a
+            className="w-full bg-primary text-on-primary py-4 rounded-full font-bold flex items-center justify-center gap-2 hover:scale-[1.02] transition-all shadow-lg"
             href={getWhatsAppUrl('Halo Kana Tape & Kitchen, saya ingin bertanya tentang produk.')}
             target="_blank"
             rel="noopener noreferrer"
