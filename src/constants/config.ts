@@ -1,6 +1,6 @@
 export const APP_CONFIG = {
   businessName: 'Kana Tape & Kitchen',
-  phoneNumber: '6281234567890', // Replace with actual WhatsApp number
+  phoneNumber: '6285641273841', // WhatsApp number
   instagram: '@kanatape',
   address: 'Sidoarjo, East Java, Indonesia',
   businessHours: 'Mon - Sat: 08:00 AM - 05:00 PM',

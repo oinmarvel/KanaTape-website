@@ -6,10 +6,10 @@ export const GallerySection: React.FC = () => {
     { src: 'tape_galeri2.JPG', alt: 'Kitchen ingredients flat-lay' },
     { src: 'gethuk_galeri1.JPG', alt: 'Hand picking up a piece of Gethuk Tape' },
     { src: 'chiffon_slicecoklat.JPG', alt: 'Delivery person handing over a box' },
-    { src: 'hemi_monyet.jpeg', alt: 'Monyet pecinta tape muffin' },
-    { src: 'tape_galeri1.JPG', alt: 'Produk Kana Tape siap saji' },
+    { src: 'chiffon_slicekeju.JPG', alt: 'Monyet pecinta tape muffin' },
+    { src: 'gethuk_galeri2.JPG', alt: 'Produk Kana Tape siap saji' },
     { src: 'gethuk_galeri1.JPG', alt: 'Gethuk tape lezat pilihan keluarga' },
-    { src: 'chiffon_slicecoklat.JPG', alt: 'Chiffon tape slice coklat premium' },
+    { src: 'hemi_monyet.jpeg', alt: 'Chiffon tape slice coklat premium' },
   ];
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -48,8 +48,8 @@ export const GallerySection: React.FC = () => {
         <h2 className="text-center font-display-lg text-headline-lg text-secondary mb-12 fade-up">Galeri Rasa</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3 md:gap-md">
           {images.map((img, idx) => (
-            <div 
-              key={idx} 
+            <div
+              key={idx}
               className={`fade-up overflow-hidden rounded-lg group cursor-pointer relative ${idx === 0 || idx === 3 ? 'sm:col-span-1' : ''}`}
               onClick={() => openModal(idx)}
             >
@@ -71,41 +71,41 @@ export const GallerySection: React.FC = () => {
 
       {/* Lightbox Modal */}
       {selectedIndex !== null && (
-        <div 
+        <div
           className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 md:p-8"
           onClick={closeModal}
         >
-          <button 
+          <button
             className="absolute top-6 right-6 text-white hover:text-gray-300 p-2 z-50"
             onClick={closeModal}
             aria-label="Close modal"
           >
             <span className="material-symbols-outlined text-4xl">close</span>
           </button>
-          
-          <button 
+
+          <button
             className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 p-2 z-50 bg-black/50 rounded-full"
             onClick={prevImage}
             aria-label="Previous image"
           >
             <span className="material-symbols-outlined text-4xl">chevron_left</span>
           </button>
-          
-          <img 
-            src={images[selectedIndex].src} 
+
+          <img
+            src={images[selectedIndex].src}
             alt={images[selectedIndex].alt}
             className="max-h-full max-w-full object-contain select-none"
             onClick={(e) => e.stopPropagation()}
           />
-          
-          <button 
+
+          <button
             className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-gray-300 p-2 z-50 bg-black/50 rounded-full"
             onClick={nextImage}
             aria-label="Next image"
           >
             <span className="material-symbols-outlined text-4xl">chevron_right</span>
           </button>
-          
+
           <div className="absolute bottom-6 left-1/2 -translate-x-1/2 text-white bg-black/50 px-4 py-2 rounded-full font-medium">
             {selectedIndex + 1} / {images.length}
           </div>

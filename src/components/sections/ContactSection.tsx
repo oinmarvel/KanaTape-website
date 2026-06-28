@@ -27,7 +27,7 @@ export const ContactSection: React.FC = () => {
             <div className="p-md bg-white rounded-lg shadow-sm border border-outline-variant/30">
               <span className="material-symbols-outlined text-primary mb-2">phone</span>
               <h4 className="font-bold">WhatsApp</h4>
-              <p className="text-sm text-on-surface-variant">+62 812 3456 7890</p>
+              <p className="text-sm text-on-surface-variant">+62 856 4127 3841</p>
             </div>
             <a
               href="https://www.instagram.com/catering_dapoermamamia.smg?igsh=MW41cDl3anQ5c3VwbQ=="
